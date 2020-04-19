@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <script src="/script.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div class="row" style="margin: auto;">
+        <div class="md-6">
+            <h1>Search</h1>
+            <input type="text"id="searchedText">
+        <button>Submit</button>
+        </div>
+    </div>
+
+
+    <script>
+
+        $(document).ready(function(){
+          $("button").click(function(){
+              //Given text
+              var text = $("#searchedText").val();
+              //websites
+              var website_linguee = "https://www.linguee.com/english-french/search?source=auto&query=";
+              var website_deepl = "https://www.deepl.com/translator#en/fr/";
+              var website_termium = "https://www.btb.termiumplus.gc.ca/tpv2alpha/alpha-eng.html?lang=eng&i=1&srchtxt=";
+              var website_traoodit = "https://www.tradooit.com/info.php?q=";
+              var website_google = "https://translate.google.ca/#view=home&op=translate&sl=auto&tl=en&text=";
+              var website_gdt = "http://gdt.oqlf.gouv.qc.ca/resultat.aspx?terme=";
+              //websites with the given text
+              window.open(website_linguee + text);
+              window.open(website_deepl + text);
+              window.open(website_termium + text);
+              window.open(website_traoodit + text);
+              window.open(website_google + text);
+              window.open(website_gdt + text);
+             }
+          );
+        });
+
+    </script>
+
+
+
+</body>
+</html>
