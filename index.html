@@ -55,17 +55,42 @@
         <button class="dropdown_button">Button name</button>
         <div class="dropdown_content">
             <input type="checkbox" onclick="myFunction"><label>Yahoo</label>
-            <input type="checkbox"><a href="https://www.msn.com/fr-ca/">MSN</a>
-            <input type="checkbox"><a href="https://www.bing.com/">Bing</a>
+            <input type="checkbox" onclick="myFunction"><label>MSN Trial</label>
+            <input type="checkbox"><a href="https://www.msn.com/fr-ca/" target="_blank">MSN</a>
+            <input type="checkbox"><a href="https://www.bing.com/" target="_blank">Bing</a>
 
         </div>
     </div>
-    <script <style>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                //Given text
+                var text = $("#searchedText").val();
+                //websites
+                var website_linguee = "https://www.linguee.com/english-french/search?source=auto&query=";
+                var website_deepl = "https://www.deepl.com/translator#en/fr/";
+                var website_termium = "https://www.btb.termiumplus.gc.ca/tpv2alpha/alpha-eng.html?lang=eng&i=1&srchtxt=";
+                var website_traoodit = "https://www.tradooit.com/info.php?q=";
+                var website_google = "https://translate.google.ca/#view=home&op=translate&sl=auto&tl=en&text=";
+                var website_gdt = "http://gdt.oqlf.gouv.qc.ca/resultat.aspx?terme=";
+                //websites with the given text
+                window.open(website_linguee + text);
+                window.open(website_deepl + text);
+                window.open(website_termium + text);
+                window.open(website_traoodit + text);
+                window.open(website_google + text);
+                window.open(website_gdt + text);
+            });
+        });
+    </script>
+
+
+    <style>
         .dropdown_div {
             position: relative;
             display: inline - block;
         }
-
+        
         .dropdown_button {
             background - color: #5961D4;
             /* button background colour */
@@ -75,19 +100,19 @@
             border: none;
             cursor: pointer;
         }
-
+        
         .dropdown_content {
             display: none;
             /* remove this to show all links before hovering */
             position: absolute;
             background - color: #f9f9f9;
             /* dropdown items - background colour */
-            width: 100 % ;
+            width: 100 %;
             /* can remove this if you want to make the menu wider/narrower  */
             /* min-width: 180px; can add this if you need to change the minimu width of menu */
             box - shadow: 0 px 6 px 14 px 0 px rgba(0, 0, 0, 0.3);
         }
-
+        
         .dropdown_content a {
             font - family: Arial;
             color: #000000;
@@ -100,13 +125,13 @@
             background-color: # 9594 A1;
             /* dropdown items hover - change background colour */
         }
-
+        
         .dropdown_div: hover.dropdown_content {
             display: block;
         }
-
+        
         .dropdown_div: hover.dropdown_button {
-                background - color: #492FA1;
+            background - color: #492FA1;
             /* button hover - change background colour */
         }
         
