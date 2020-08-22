@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,44 +11,115 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
+
 <body>
 
     <div class="row" style="margin: auto;">
         <div class="md-6">
             <h1>Search</h1>
-            <input type="text"id="searchedText">
-        <button>Submit</button>
+            <input type="text" id="searchedText">
+            <button>Submit</button>
         </div>
     </div>
 
 
     <script>
-
-        $(document).ready(function(){
-          $("button").click(function(){
-              //Given text
-              var text = $("#searchedText").val();
-              //websites
-              var website_linguee = "https://www.linguee.com/english-french/search?source=auto&query=";
-              var website_deepl = "https://www.deepl.com/translator#en/fr/";
-              var website_termium = "https://www.btb.termiumplus.gc.ca/tpv2alpha/alpha-eng.html?lang=eng&i=1&srchtxt=";
-              var website_traoodit = "https://www.tradooit.com/info.php?q=";
-              var website_google = "https://translate.google.ca/#view=home&op=translate&sl=auto&tl=en&text=";
-              var website_gdt = "http://gdt.oqlf.gouv.qc.ca/resultat.aspx?terme=";
-              //websites with the given text
-              window.open(website_linguee + text);
-              window.open(website_deepl + text);
-              window.open(website_termium + text);
-              window.open(website_traoodit + text);
-              window.open(website_google + text);
-              window.open(website_gdt + text);
-             }
-          );
+        $(document).ready(function() {
+            $("button").click(function() {
+                //Given text
+                var text = $("#searchedText").val();
+                //websites
+                var website_linguee = "https://www.linguee.com/english-french/search?source=auto&query=";
+                var website_deepl = "https://www.deepl.com/translator#en/fr/";
+                var website_termium = "https://www.btb.termiumplus.gc.ca/tpv2alpha/alpha-eng.html?lang=eng&i=1&srchtxt=";
+                var website_traoodit = "https://www.tradooit.com/info.php?q=";
+                var website_google = "https://translate.google.ca/#view=home&op=translate&sl=auto&tl=en&text=";
+                var website_gdt = "http://gdt.oqlf.gouv.qc.ca/resultat.aspx?terme=";
+                //websites with the given text
+                window.open(website_linguee + text);
+                window.open(website_deepl + text);
+                window.open(website_termium + text);
+                window.open(website_traoodit + text);
+                window.open(website_google + text);
+                window.open(website_gdt + text);
+            });
         });
-
     </script>
+    <form>
+        <select>
+        <option><a href="https://ca.yahoo.com/">Yahoo</a></option><option><a href="https://www.msn.com/fr-ca/">MSN</a></option><option><a href="https://www.bing.com/">Bing</a></option>
+    </select>
+    </form>
+    <!--Code Mahal-->
+    <div class="dropdown_div">
+        <button class="dropdown_button">Button name</button>
+        <div class="dropdown_content">
+            <a href="https://ca.yahoo.com/">Yahoo</a>
+            <a href="https://www.msn.com/fr-ca/">MSN</a>
+            <a href="https://www.bing.com/">Bing</a>
 
+        </div>
+    </div>
 
+    <style>
+        .dropdown_div {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown_button {
+            background-color: #5961D4;
+            /* button background colour */
+            color: #ffffff;
+            padding: 14px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .dropdown_content {
+            display: none;
+            /* remove this to show all links before hovering */
+            position: absolute;
+            background-color: #f9f9f9;
+            /* dropdown items - background colour */
+            width: 100%;
+            /* can remove this if you want to make the menu wider/narrower  */
+            /* min-width: 180px; can add this if you need to change the minimu width of menu */
+            box-shadow: 0px 6px 14px 0px rgba(0, 0, 0, 0.3);
+        }
+        
+        .dropdown_content a {
+            font-family: Arial;
+            color: #000000;
+            padding: 12px 18px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .dropdown_content a:hover {
+            background-color: #9594A1;
+            /* dropdown items hover - change background colour */
+        }
+        
+        .dropdown_div:hover .dropdown_content {
+            display: block;
+        }
+        
+        .dropdown_div:hover .dropdown_button {
+            background-color: #492FA1;
+            /* button hover - change background colour */
+        }
+        
+        p {
+            font-family: Arial;
+        }
+        
+        h2 {
+            font-family: Arial;
+        }
+    </style>
 
 </body>
+
 </html>
