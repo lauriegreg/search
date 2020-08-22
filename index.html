@@ -54,43 +54,42 @@
     <div class="dropdown_div">
         <button class="dropdown_button">Button name</button>
         <div class="dropdown_content">
-            <a href="https://ca.yahoo.com/">Yahoo</a>
-            <a href="https://www.msn.com/fr-ca/">MSN</a>
-            <a href="https://www.bing.com/">Bing</a>
+            <input type="checkbox" onclick="myFunction"><label>Yahoo</label>
+            <input type="checkbox"><a href="https://www.msn.com/fr-ca/">MSN</a>
+            <input type="checkbox"><a href="https://www.bing.com/">Bing</a>
 
         </div>
     </div>
-
-    <style>
+    <script <style>
         .dropdown_div {
             position: relative;
-            display: inline-block;
+            display: inline - block;
         }
-        
+
         .dropdown_button {
-            background-color: #5961D4;
+            background - color: #5961D4;
             /* button background colour */
-            color: #ffffff;
-            padding: 14px;
-            font-size: 16px;
+            color: # ffffff;
+            padding: 14 px;
+            font - size: 16 px;
             border: none;
             cursor: pointer;
         }
-        
+
         .dropdown_content {
             display: none;
             /* remove this to show all links before hovering */
             position: absolute;
-            background-color: #f9f9f9;
+            background - color: #f9f9f9;
             /* dropdown items - background colour */
-            width: 100%;
+            width: 100 % ;
             /* can remove this if you want to make the menu wider/narrower  */
             /* min-width: 180px; can add this if you need to change the minimu width of menu */
-            box-shadow: 0px 6px 14px 0px rgba(0, 0, 0, 0.3);
+            box - shadow: 0 px 6 px 14 px 0 px rgba(0, 0, 0, 0.3);
         }
-        
+
         .dropdown_content a {
-            font-family: Arial;
+            font - family: Arial;
             color: #000000;
             padding: 12px 18px;
             text-decoration: none;
@@ -98,16 +97,16 @@
         }
         
         .dropdown_content a:hover {
-            background-color: #9594A1;
+            background-color: # 9594 A1;
             /* dropdown items hover - change background colour */
         }
-        
-        .dropdown_div:hover .dropdown_content {
+
+        .dropdown_div: hover.dropdown_content {
             display: block;
         }
-        
-        .dropdown_div:hover .dropdown_button {
-            background-color: #492FA1;
+
+        .dropdown_div: hover.dropdown_button {
+                background - color: #492FA1;
             /* button hover - change background colour */
         }
         
